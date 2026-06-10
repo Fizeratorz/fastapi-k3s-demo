@@ -30,7 +30,7 @@ jobs:
         with:
           context: .
           push: true
-          tags: ghcr.io/${{ github.repository }}:${{ github.sha }}
+          tags: ghcr.io/fizeratorz/fastapi-k3s-demo:${{ github.sha }}
 
       # 4. Устанавливаем kubectl
       - name: Setup kubectl
