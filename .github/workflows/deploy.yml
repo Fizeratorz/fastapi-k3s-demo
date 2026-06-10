@@ -49,5 +49,5 @@ jobs:
       - name: Deploy to Kubernetes
         run: |
           echo "Deploying new image..."
-          kubectl set image deployment/fastapi-demo fastapi-demo=ghcr.io/fizeratorz/fastapi-k3s-demo:${{ github.sha }}
+          kubectl set image deployment/fastapi-demo nginx=ghcr.io/fizeratorz/fastapi-k3s-demo:${{ github.sha }}:${{ github.sha }}
           kubectl rollout status deployment/fastapi-demo --timeout=300s
